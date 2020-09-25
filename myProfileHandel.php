@@ -79,6 +79,7 @@ if(isset($_POST['send'])){
 
             $result=$quer->updateEmpInfo($id,$employee_data);
             if($result==true){
+                $_SESSION['emp_email']=$email;
                 header('location:myProfile.php?id='.$id);
             }
         }
